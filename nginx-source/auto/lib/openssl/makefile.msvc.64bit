@@ -1,0 +1,21 @@
+
+# Copyright (C) Igor Sysoev
+# Copyright (C) Nginx, Inc.
+  
+  
+all:
+  cd $(OPENSSL)
+
+  perl Configure VC-WIN64A no-shared \
+    --prefix="%cd%/openssl"                         \
+    --openssldir="%cd%/openssl/ssl"                 \
+    $(OPENSSL_OPT)
+
+  if exist ms\do_win64a.bat (                         \
+    ms\do_win64a                                    \
+    && $(MAKE) -f ms\nt.mak                         \
+    && $(MAKE) -f ms\nt.mak install                 \
+  ) else (                                            \
+    $(MAKE)                                         \
+    && $(MAKE) install_sw                           \
+  )
