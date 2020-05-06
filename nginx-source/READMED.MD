@@ -17,10 +17,6 @@ download PCRE，zlib and OpenSSL, and uncompress them(following code should be r
 
 Edit configuration for openssl (when you need to compile 64bit executable):
   auto\lib\openssl\makefile.msvc
-  
-  # Copyright (C) Igor Sysoev
-  # Copyright (C) Nginx, Inc.
-    
     
   all:
       cd $(OPENSSL)
