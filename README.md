@@ -8,8 +8,6 @@ Nginx (with nginx-rtmp-module)
 
 Stunnel (For Facebook Live)
 
-Youtube Tutorial: https://www.youtube.com/watch?v=wJaz59ZHgCo
-
 ### Nginx Was compiled for windows win32 with the following configuration:
 * Nginx: 1.17.10 
 * Nginx-Rtmp-Module: https://github.com/arut/nginx-rtmp-module
